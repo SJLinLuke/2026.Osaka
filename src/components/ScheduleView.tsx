@@ -59,8 +59,6 @@ export default function ScheduleView({ schedule }: ScheduleViewProps) {
               {activity.mapUrl && (
                 <a
                   href={activity.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="map-link"
                 >
                   查看地圖 →
