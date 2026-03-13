@@ -1,183 +1,464 @@
 .trip-info {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem;
 }
 
 .info-section {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .section-title {
-  font-size: 1.75rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 900;
   color: #2d3748;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 3px solid #667eea;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid #FFB6C1;
+  letter-spacing: 0.03em;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF6B9D, transparent);
+  border-radius: 2px;
 }
 
 .flights-container {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .flight-card {
   background: white;
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border: 3px solid #FFE4E1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 飛機圖示裝飾 */
+.flight-card::before {
+  content: '✈️';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  opacity: 0.15;
 }
 
 .flight-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 157, 0.2);
+  transform: translateY(-6px);
+  border-color: #FFB6C1;
 }
 
 .flight-direction {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0.65rem 1.5rem;
+  background: linear-gradient(135deg, #FF6B9D 0%, #C23866 100%);
   color: white;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  border-radius: 25px;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.3);
 }
 
 .flight-details {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .flight-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
+  border-bottom: 2px dotted #FFE4E1;
+}
+
+.flight-row:last-of-type {
+  border-bottom: none;
 }
 
 .flight-row .label {
   color: #718096;
-  font-size: 0.875rem;
-  font-weight: 500;
-  min-width: 80px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  min-width: 90px;
+  letter-spacing: 0.03em;
 }
 
 .flight-row .value {
   color: #2d3748;
-  font-weight: 600;
+  font-weight: 700;
   text-align: right;
+  font-size: 1rem;
 }
 
 .flight-route {
-  margin-top: 0.75rem;
-  padding: 1rem;
-  background: #f7fafc;
-  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #fff8f0 0%, #ffe8e8 100%);
+  border-radius: 16px;
   text-align: center;
-  font-weight: 600;
-  color: #4a5568;
-  border-left: 4px solid #667eea;
+  font-weight: 700;
+  color: #C23866;
+  border: 2px solid #FFE4E1;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
 }
 
 .accommodations-container {
   display: grid;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .accommodation-card {
   background: white;
-  border-radius: 12px;
-  padding: 1.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 3px solid #FFE4E1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.accommodation-card::before {
+  content: '🏨';
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 1.75rem;
+  opacity: 0.12;
 }
 
 .accommodation-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 157, 0.2);
+  transform: translateY(-4px);
+  border-color: #FFB6C1;
 }
 
 .accommodation-header {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .nights-badge,
 .location-badge {
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
 }
 
 .nights-badge {
-  background: #e6fffa;
-  color: #234e52;
+  background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
+  color: #00695C;
+  border: 2px solid #80DEEA;
 }
 
 .location-badge {
-  background: #fef5e7;
-  color: #7d5e0e;
+  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+  color: #E65100;
+  border: 2px solid #FFCC80;
 }
 
 .accommodation-name {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: #2d3748;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
 }
 
 .accommodation-cost {
-  color: #667eea;
-  font-weight: 700;
-  font-size: 1.125rem;
+  color: #FF6B9D;
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
 }
 
 .cost-summary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
-  padding: 1.5rem;
+  background: linear-gradient(135deg, #FF6B9D 0%, #C23866 100%);
+  border-radius: 24px;
+  padding: 2rem;
   color: white;
+  box-shadow: 0 8px 24px rgba(255, 107, 157, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.cost-summary::before {
+  content: '💰';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  opacity: 0.2;
 }
 
 .summary-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .summary-row.per-person {
-  padding-top: 1rem;
-  margin-top: 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1.25rem;
+  margin-top: 1rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .total-cost,
 .cost-per-person {
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
 }
 
-@media (max-width: 768px) {
+/* 平板尺寸 */
+@media (max-width: 1024px) {
   .trip-info {
-    padding: 1rem 0.75rem;
+    padding: 2rem 1.25rem;
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.85rem;
   }
 
   .flight-card,
   .accommodation-card {
+    padding: 1.65rem;
+  }
+
+  .cost-summary {
+    padding: 1.75rem;
+  }
+}
+
+/* 手機尺寸 */
+@media (max-width: 768px) {
+  .trip-info {
+    padding: 1.5rem 1rem;
+  }
+
+  .info-section {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.85rem;
+  }
+
+  .flights-container,
+  .accommodations-container {
+    gap: 1.5rem;
+  }
+
+  .flight-card {
+    padding: 1.5rem;
+    border-width: 2px;
+  }
+
+  .flight-card::before {
+    font-size: 1.75rem;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .flight-direction {
+    padding: 0.6rem 1.35rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .flight-row {
+    padding: 0.65rem 0;
+  }
+
+  .flight-row .label {
+    font-size: 0.9rem;
+    min-width: 80px;
+  }
+
+  .flight-row .value {
+    font-size: 0.95rem;
+  }
+
+  .flight-route {
+    padding: 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .accommodation-card {
+    padding: 1.5rem;
+    border-width: 2px;
+  }
+
+  .accommodation-card::before {
+    font-size: 1.5rem;
+  }
+
+  .nights-badge,
+  .location-badge {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .accommodation-name {
+    font-size: 1.15rem;
+  }
+
+  .accommodation-cost {
+    font-size: 1.25rem;
+  }
+
+  .cost-summary {
+    padding: 1.65rem;
+  }
+
+  .cost-summary::before {
+    font-size: 2rem;
+  }
+
+  .summary-row {
+    font-size: 1rem;
+  }
+
+  .total-cost,
+  .cost-per-person {
+    font-size: 1.35rem;
+  }
+}
+
+/* 小手機尺寸 */
+@media (max-width: 480px) {
+  .trip-info {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .info-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .flights-container,
+  .accommodations-container {
+    gap: 1.25rem;
+  }
+
+  .flight-card {
+    padding: 1.25rem;
+  }
+
+  .flight-card::before {
+    font-size: 1.5rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .flight-direction {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .flight-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.6rem 0;
+    gap: 0.25rem;
+  }
+
+  .flight-row .label {
+    font-size: 0.8rem;
+    min-width: auto;
+  }
+
+  .flight-row .value {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .flight-route {
     padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .accommodation-card {
+    padding: 1.25rem;
+  }
+
+  .accommodation-card::before {
+    font-size: 1.35rem;
+  }
+
+  .nights-badge,
+  .location-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .accommodation-name {
+    font-size: 1.05rem;
+  }
+
+  .accommodation-cost {
+    font-size: 1.15rem;
+  }
+
+  .cost-summary {
+    padding: 1.5rem;
+  }
+
+  .cost-summary::before {
+    font-size: 1.75rem;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .summary-row {
+    font-size: 0.95rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .summary-row.per-person {
+    padding-top: 1rem;
+    margin-top: 0.85rem;
+  }
+
+  .total-cost,
+  .cost-per-person {
+    font-size: 1.25rem;
   }
 }
