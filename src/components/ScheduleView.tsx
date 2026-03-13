@@ -56,9 +56,9 @@ export default function ScheduleView({ schedule }: ScheduleViewProps) {
                   ))}
                 </ul>
               )}
-              {activity.mapUrl && (
+              {(activity.mapUrl || activity.address) && (
                 <a
-                  href={activity.mapUrl}
+                  href={activity.mapUrl || `https://maps.apple.com/?q=${encodeURIComponent(activity.address || activity.title)}`}
                   className="map-link"
                 >
                   查看地圖 →
