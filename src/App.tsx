@@ -4,9 +4,10 @@ import DateSelector from './components/DateSelector'
 import ScheduleView from './components/ScheduleView'
 import TripInfo from './components/TripInfo'
 import Checklist from './components/Checklist'
+import ShoppingList from './components/ShoppingList'
 import { schedules } from './data/tripData'
 
-type ViewMode = 'schedule' | 'info' | 'checklist'
+type ViewMode = 'schedule' | 'info' | 'checklist' | 'shopping'
 
 function App() {
   const [selectedDay, setSelectedDay] = useState(1)
@@ -39,6 +40,12 @@ function App() {
           >
             行前備忘錄
           </button>
+          <button
+            className={`nav-button ${viewMode === 'shopping' ? 'active' : ''}`}
+            onClick={() => setViewMode('shopping')}
+          >
+            採買清單
+          </button>
         </nav>
       </header>
 
@@ -64,6 +71,12 @@ function App() {
       {viewMode === 'checklist' && (
         <main className="app-main">
           <Checklist />
+        </main>
+      )}
+
+      {viewMode === 'shopping' && (
+        <main className="app-main">
+          <ShoppingList />
         </main>
       )}
 
