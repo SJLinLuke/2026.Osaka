@@ -28,6 +28,7 @@ body {
   padding: 3rem 1.5rem 2rem;
   border-bottom: 1px solid #e8e8e8;
   position: relative;
+  box-shadow: 0 2px 8px rgba(190, 181, 173, 0.08);
 }
 
 .app-title {
@@ -65,17 +66,21 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(190, 181, 173, 0.1);
 }
 
 .nav-button:hover {
   background: #f5f5f5;
   border-color: #beb5ad;
+  box-shadow: 0 4px 8px rgba(190, 181, 173, 0.15);
+  transform: translateY(-1px);
 }
 
 .nav-button.active {
   background: #beb5ad;
   color: white;
   border-color: #beb5ad;
+  box-shadow: 0 4px 12px rgba(190, 181, 173, 0.25);
 }
 
 .app-main {

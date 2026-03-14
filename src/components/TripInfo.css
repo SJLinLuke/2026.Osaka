@@ -29,11 +29,13 @@
   padding: 2rem;
   border: 1px solid #e0e0e0;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(190, 181, 173, 0.1);
 }
 
 .flight-card:hover {
   border-color: #beb5ad;
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(190, 181, 173, 0.18);
 }
 
 .flight-direction {
@@ -46,6 +48,7 @@
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(190, 181, 173, 0.25);
 }
 
 .flight-details {
@@ -107,11 +110,13 @@
   padding: 1.75rem;
   border: 1px solid #e0e0e0;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(190, 181, 173, 0.1);
 }
 
 .accommodation-card:hover {
   border-color: #beb5ad;
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(190, 181, 173, 0.18);
 }
 
 .accommodation-header {
@@ -163,6 +168,7 @@
   border-radius: 12px;
   padding: 2rem;
   color: white;
+  box-shadow: 0 4px 12px rgba(190, 181, 173, 0.3);
 }
 
 .summary-row {
