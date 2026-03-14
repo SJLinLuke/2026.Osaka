@@ -146,7 +146,7 @@ export const schedules: DaySchedule[] = [
     activities: [
       { time: "07:30", title: "起床" },
       { time: "08:30", title: "出門" },
-      { time: "09:00", title: "找個 Lawson 買早餐" },
+      { time: "09:00", title: "找個 Lawson 買早餐，可以去西之丸庭園野餐賞櫻" },
       {
         time: "10:00",
         title: "大阪城",
