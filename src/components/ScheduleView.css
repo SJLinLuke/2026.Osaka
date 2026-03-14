@@ -1,110 +1,75 @@
 .schedule-view {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .schedule-header {
   text-align: center;
   margin-bottom: 2.5rem;
-  padding-bottom: 1.75rem;
-  border-bottom: 4px solid #FFB6C1;
-  position: relative;
-}
-
-/* 日式裝飾線 */
-.schedule-header::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #FF6B9D, transparent);
-  border-radius: 2px;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .schedule-title {
-  font-size: 2.25rem;
-  font-weight: 900;
-  color: #2d3748;
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #3a3a3a;
   margin-bottom: 0.75rem;
-  background: linear-gradient(135deg, #FF6B9D 0%, #C23866 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 0.03em;
-  position: relative;
-  display: inline-block;
+  letter-spacing: 0.05em;
 }
 
 .schedule-date {
-  font-size: 1.25rem;
-  color: #718096;
-  margin-bottom: 1.25rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
 }
 
 .schedule-accommodation {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  background: linear-gradient(135deg, #fff8f0 0%, #ffe8e8 100%);
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  border: 2px solid #FFE4E1;
-  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.15);
+  gap: 0.5rem;
+  background: #f8f8f8;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
 }
 
 .accommodation-label {
-  font-size: 0.9rem;
-  color: #C23866;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 .accommodation-name {
-  font-size: 0.9rem;
-  color: #2d3748;
-  font-weight: 600;
+  font-size: 0.75rem;
+  color: #3a3a3a;
+  font-weight: 400;
 }
 
 .activities-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .activity-item {
   display: flex;
-  gap: 1.75rem;
+  gap: 1.5rem;
   position: relative;
-  animation: fadeInUp 0.5s ease-out;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 日式連接線 */
 .activity-item::before {
   content: '';
   position: absolute;
-  left: 54px;
-  top: 60px;
-  bottom: -32px;
-  width: 3px;
-  background: linear-gradient(to bottom, #FFB6C1 0%, rgba(255, 182, 193, 0.3) 100%);
-  border-radius: 2px;
+  left: 42px;
+  top: 50px;
+  bottom: -24px;
+  width: 1px;
+  background: linear-gradient(to bottom, #d0d0d0 0%, transparent 100%);
 }
 
 .activity-item:last-child::before {
@@ -113,187 +78,142 @@
 
 .activity-time {
   flex-shrink: 0;
-  position: relative;
 }
 
-/* 時間徽章 - 和風設計 */
 .time-badge {
-  min-width: 90px;
-  padding: 0.75rem 1.25rem;
-  background: linear-gradient(135deg, #FF6B9D 0%, #C23866 100%);
-  color: white;
-  border-radius: 16px;
-  font-weight: 800;
-  font-size: 1rem;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(255, 107, 157, 0.35);
-  position: relative;
-  letter-spacing: 0.05em;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.time-badge::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 8px;
-  height: 8px;
+  min-width: 70px;
+  padding: 0.5rem 1rem;
   background: white;
-  border-radius: 50%;
-  opacity: 0.4;
+  color: #5a5a5a;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  font-weight: 300;
+  font-size: 0.875rem;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .activity-content {
   flex: 1;
   background: white;
-  padding: 1.5rem;
-  border-radius: 20px;
-  border: 3px solid #FFE4E1;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-/* 裝飾角 */
-.activity-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, transparent 50%, #FFE4E1 50%);
-  opacity: 0.5;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
 }
 
 .activity-content:hover {
-  box-shadow: 0 8px 24px rgba(255, 107, 157, 0.2);
-  transform: translateY(-4px);
-  border-color: #FFB6C1;
+  border-color: #5a5a5a;
+  transform: translateY(-2px);
 }
 
 .activity-title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: #2d3748;
-  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #3a3a3a;
+  margin-bottom: 0.5rem;
   letter-spacing: 0.02em;
-  line-height: 1.4;
 }
 
 .activity-description {
-  color: #4a5568;
-  margin-bottom: 1rem;
+  color: #666;
+  margin-bottom: 0.75rem;
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  font-weight: 300;
 }
 
 .activity-address {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
-  color: #718096;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  background: linear-gradient(135deg, #fff8f0 0%, #ffe8e8 100%);
-  border-radius: 12px;
+  gap: 0.5rem;
+  color: #888;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+  padding: 0.65rem;
+  background: #f8f8f8;
+  border-radius: 8px;
   line-height: 1.6;
-  border-left: 4px solid #FF6B9D;
+  border-left: 2px solid #b0b0b0;
+  font-weight: 300;
 }
 
 .location-icon {
   flex-shrink: 0;
-  margin-top: 3px;
-  color: #FF6B9D;
+  margin-top: 2px;
+  color: #888;
 }
 
 .activity-notes {
-  margin: 1rem 0 0 0;
-  padding-left: 1.5rem;
+  margin: 0.75rem 0 0 0;
+  padding-left: 1.25rem;
   list-style: none;
 }
 
 .activity-notes li {
   position: relative;
-  color: #4a5568;
-  font-size: 0.9rem;
-  line-height: 2;
-  padding-left: 1rem;
+  color: #666;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  padding-left: 0.75rem;
+  font-weight: 300;
 }
 
 .activity-notes li::before {
-  content: '◆';
+  content: '·';
   position: absolute;
   left: 0;
-  color: #FF6B9D;
-  font-size: 0.7rem;
+  color: #999;
+  font-weight: normal;
+  font-size: 1.2rem;
 }
 
 .map-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
-  padding: 0.6rem 1.25rem;
-  background: linear-gradient(135deg, #FF6B9D 0%, #C23866 100%);
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: #3a3a3a;
   color: white;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 700;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.3);
+  font-size: 0.75rem;
+  font-weight: 400;
+  border-radius: 16px;
+  transition: all 0.2s ease;
   letter-spacing: 0.03em;
 }
 
 .map-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(255, 107, 157, 0.4);
-  gap: 0.75rem;
+  background: #5a5a5a;
+  transform: translateY(-1px);
 }
 
 /* 平板尺寸 */
 @media (max-width: 1024px) {
   .schedule-view {
-    padding: 2rem 1.25rem;
+    padding: 1.75rem 1.25rem;
   }
 
   .schedule-title {
-    font-size: 2rem;
-  }
-
-  .schedule-date {
-    font-size: 1.15rem;
+    font-size: 1.6rem;
   }
 
   .activities-list {
-    gap: 1.75rem;
+    gap: 1.35rem;
   }
 
   .activity-item {
-    gap: 1.5rem;
-  }
-
-  .activity-item::before {
-    left: 48px;
-    top: 55px;
+    gap: 1.35rem;
   }
 
   .time-badge {
-    min-width: 85px;
-    padding: 0.7rem 1.15rem;
-    font-size: 0.95rem;
+    min-width: 65px;
+    font-size: 0.85rem;
   }
 
   .activity-content {
-    padding: 1.35rem;
-  }
-
-  .activity-title {
-    font-size: 1.25rem;
+    padding: 1.15rem;
   }
 }
 
@@ -305,73 +225,69 @@
 
   .schedule-header {
     margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
   }
 
   .schedule-title {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
   }
 
   .schedule-date {
-    font-size: 1.05rem;
+    font-size: 0.8rem;
   }
 
   .schedule-accommodation {
-    padding: 0.65rem 1.25rem;
-    gap: 0.6rem;
+    padding: 0.45rem 1.1rem;
   }
 
   .accommodation-label,
   .accommodation-name {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
   }
 
   .activities-list {
-    gap: 1.5rem;
-  }
-
-  .activity-item {
     gap: 1.25rem;
   }
 
+  .activity-item {
+    gap: 1.15rem;
+  }
+
   .activity-item::before {
-    left: 42px;
-    top: 50px;
-    width: 2px;
+    left: 36px;
+    top: 45px;
   }
 
   .time-badge {
-    min-width: 75px;
-    padding: 0.65rem 1rem;
-    font-size: 0.9rem;
+    min-width: 60px;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
   }
 
   .activity-content {
-    padding: 1.2rem;
-    border-width: 2px;
+    padding: 1.05rem;
   }
 
   .activity-title {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
 
   .activity-description {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
   .activity-address {
-    font-size: 0.85rem;
-    padding: 0.65rem;
+    font-size: 0.75rem;
+    padding: 0.6rem;
   }
 
   .activity-notes li {
-    font-size: 0.85rem;
-    line-height: 1.8;
+    font-size: 0.75rem;
   }
 
   .map-link {
-    font-size: 0.85rem;
-    padding: 0.55rem 1.1rem;
+    font-size: 0.7rem;
+    padding: 0.45rem 0.9rem;
   }
 }
 
@@ -386,29 +302,28 @@
   }
 
   .schedule-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .schedule-date {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 0.75rem;
   }
 
   .schedule-accommodation {
-    padding: 0.6rem 1.1rem;
+    padding: 0.4rem 1rem;
   }
 
   .accommodation-label,
   .accommodation-name {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
   }
 
   .activities-list {
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .activity-item {
-    gap: 1rem;
+    gap: 0.9rem;
     flex-direction: column;
   }
 
@@ -418,37 +333,32 @@
 
   .time-badge {
     min-width: 100%;
-    padding: 0.6rem 0.9rem;
-    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
   }
 
   .activity-content {
-    padding: 1rem;
+    padding: 0.95rem;
   }
 
   .activity-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .activity-description {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .activity-address {
-    font-size: 0.8rem;
-    padding: 0.6rem;
-  }
-
-  .activity-notes {
-    padding-left: 1.25rem;
+    font-size: 0.7rem;
   }
 
   .activity-notes li {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .map-link {
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+    padding: 0.4rem 0.85rem;
   }
 }

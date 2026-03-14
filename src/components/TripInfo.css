@@ -9,25 +9,13 @@
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #2d3748;
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #3a3a3a;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 4px solid #FFB6C1;
-  letter-spacing: 0.03em;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #FF6B9D, transparent);
-  border-radius: 2px;
+  border-bottom: 1px solid #e0e0e0;
+  letter-spacing: 0.05em;
 }
 
 .flights-container {
@@ -37,42 +25,27 @@
 
 .flight-card {
   background: white;
-  border-radius: 24px;
+  border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
-  border: 3px solid #FFE4E1;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-/* 飛機圖示裝飾 */
-.flight-card::before {
-  content: '✈️';
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  font-size: 2rem;
-  opacity: 0.15;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
 }
 
 .flight-card:hover {
-  box-shadow: 0 12px 32px rgba(255, 107, 157, 0.2);
-  transform: translateY(-6px);
-  border-color: #FFB6C1;
+  border-color: #5a5a5a;
+  transform: translateY(-2px);
 }
 
 .flight-direction {
   display: inline-block;
-  padding: 0.65rem 1.5rem;
-  background: linear-gradient(135deg, #FF6B9D 0%, #C23866 100%);
+  padding: 0.5rem 1.25rem;
+  background: #3a3a3a;
   color: white;
-  border-radius: 25px;
-  font-weight: 800;
-  font-size: 1rem;
+  border-radius: 16px;
+  font-weight: 400;
+  font-size: 0.875rem;
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.3);
 }
 
 .flight-details {
@@ -86,7 +59,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 2px dotted #FFE4E1;
+  border-bottom: 1px dotted #e0e0e0;
 }
 
 .flight-row:last-of-type {
@@ -94,31 +67,32 @@
 }
 
 .flight-row .label {
-  color: #718096;
-  font-size: 0.95rem;
-  font-weight: 700;
+  color: #888;
+  font-size: 0.875rem;
+  font-weight: 400;
   min-width: 90px;
   letter-spacing: 0.03em;
 }
 
 .flight-row .value {
-  color: #2d3748;
-  font-weight: 700;
+  color: #3a3a3a;
+  font-weight: 400;
   text-align: right;
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .flight-route {
   margin-top: 1rem;
-  padding: 1.25rem;
-  background: linear-gradient(135deg, #fff8f0 0%, #ffe8e8 100%);
-  border-radius: 16px;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 12px;
   text-align: center;
-  font-weight: 700;
-  color: #C23866;
-  border: 2px solid #FFE4E1;
+  font-weight: 300;
+  color: #3a3a3a;
+  border: 1px solid #e0e0e0;
   letter-spacing: 0.02em;
   line-height: 1.6;
+  font-size: 0.875rem;
 }
 
 .accommodations-container {
@@ -129,28 +103,15 @@
 
 .accommodation-card {
   background: white;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 1.75rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border: 3px solid #FFE4E1;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.accommodation-card::before {
-  content: '🏨';
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  font-size: 1.75rem;
-  opacity: 0.12;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
 }
 
 .accommodation-card:hover {
-  box-shadow: 0 8px 24px rgba(255, 107, 157, 0.2);
-  transform: translateY(-4px);
-  border-color: #FFB6C1;
+  border-color: #5a5a5a;
+  transform: translateY(-2px);
 }
 
 .accommodation-header {
@@ -162,58 +123,46 @@
 
 .nights-badge,
 .location-badge {
-  padding: 0.5rem 1rem;
-  border-radius: 16px;
-  font-size: 0.85rem;
-  font-weight: 800;
+  padding: 0.4rem 1rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 400;
   letter-spacing: 0.03em;
 }
 
 .nights-badge {
-  background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
-  color: #00695C;
-  border: 2px solid #80DEEA;
+  background: #f8f8f8;
+  color: #5a5a5a;
+  border: 1px solid #d0d0d0;
 }
 
 .location-badge {
-  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
-  color: #E65100;
-  border: 2px solid #FFCC80;
+  background: #f8f8f8;
+  color: #5a5a5a;
+  border: 1px solid #d0d0d0;
 }
 
 .accommodation-name {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #2d3748;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #3a3a3a;
   margin-bottom: 0.75rem;
   letter-spacing: 0.02em;
   line-height: 1.4;
 }
 
 .accommodation-cost {
-  color: #FF6B9D;
-  font-weight: 900;
-  font-size: 1.35rem;
+  color: #5a5a5a;
+  font-weight: 400;
+  font-size: 1.125rem;
   letter-spacing: 0.02em;
 }
 
 .cost-summary {
-  background: linear-gradient(135deg, #FF6B9D 0%, #C23866 100%);
-  border-radius: 24px;
+  background: #3a3a3a;
+  border-radius: 12px;
   padding: 2rem;
   color: white;
-  box-shadow: 0 8px 24px rgba(255, 107, 157, 0.35);
-  position: relative;
-  overflow: hidden;
-}
-
-.cost-summary::before {
-  content: '💰';
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  font-size: 2.5rem;
-  opacity: 0.2;
 }
 
 .summary-row {
@@ -221,20 +170,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 300;
 }
 
 .summary-row.per-person {
   padding-top: 1.25rem;
   margin-top: 1rem;
-  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .total-cost,
 .cost-per-person {
-  font-weight: 900;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.25rem;
   letter-spacing: 0.02em;
 }
 

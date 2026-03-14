@@ -53,6 +53,14 @@ function App() {
           <TripInfo />
         </main>
       )}
+
+      <footer className="app-footer">
+        <div className="build-info">
+          <span className="build-item">{import.meta.env.VITE_BUILD_TIME || 'dev'}</span>
+          <span className="build-item">|</span>
+          <span className="build-item">{import.meta.env.VITE_COMMIT_HASH || 'local'}</span>
+        </div>
+      </footer>
     </div>
   )
 }
