@@ -256,17 +256,17 @@
   }
 
   .flight-row .label {
-    font-size: 0.9rem;
-    min-width: 80px;
+    font-size: 0.95rem;
+    min-width: 85px;
   }
 
   .flight-row .value {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .flight-route {
-    padding: 1.1rem;
-    font-size: 0.95rem;
+    padding: 1.15rem;
+    font-size: 1rem;
   }
 
   .accommodation-card {
@@ -280,16 +280,16 @@
 
   .nights-badge,
   .location-badge {
-    padding: 0.45rem 0.9rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.85rem;
   }
 
   .accommodation-name {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
   .accommodation-cost {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .cost-summary {

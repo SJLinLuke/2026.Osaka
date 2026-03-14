@@ -675,6 +675,34 @@
     padding: 1.5rem 1rem;
   }
 
+  .shopping-title {
+    font-size: 1.5rem;
+  }
+
+  .shopping-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .add-store-button {
+    font-size: 0.9rem;
+  }
+
+  .store-name-input {
+    font-size: 0.9rem;
+  }
+
+  .store-name {
+    font-size: 1.15rem;
+  }
+
+  .item-name {
+    font-size: 1rem;
+  }
+
+  .item-notes {
+    font-size: 0.85rem;
+  }
+
   .stores-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
@@ -692,6 +720,15 @@
     max-height: 95vh;
   }
 
+  .modal-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 0.9rem;
+  }
+
   .image-modal-close {
     top: 1rem;
     right: 1rem;
@@ -701,6 +738,35 @@
 @media (max-width: 480px) {
   .shopping-list-view {
     padding: 1.25rem 0.75rem;
+  }
+
+  .shopping-title {
+    font-size: 1.35rem;
+  }
+
+  .shopping-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .store-name {
+    font-size: 1.05rem;
+  }
+
+  .item-name {
+    font-size: 0.95rem;
+  }
+
+  .item-notes {
+    font-size: 0.8rem;
+  }
+
+  .modal-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 0.85rem;
   }
 
   .add-store-form {
