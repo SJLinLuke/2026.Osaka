@@ -167,8 +167,7 @@
 }
 
 .activity-notes li::before {
-  content: '·';
-  position: absolute;
+  content: '• ';
   left: 0;
   color: #999;
   font-weight: normal;

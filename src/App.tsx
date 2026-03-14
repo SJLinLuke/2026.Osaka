@@ -3,9 +3,10 @@ import './App.css'
 import DateSelector from './components/DateSelector'
 import ScheduleView from './components/ScheduleView'
 import TripInfo from './components/TripInfo'
+import Checklist from './components/Checklist'
 import { schedules } from './data/tripData'
 
-type ViewMode = 'schedule' | 'info'
+type ViewMode = 'schedule' | 'info' | 'checklist'
 
 function App() {
   const [selectedDay, setSelectedDay] = useState(1)
@@ -32,6 +33,12 @@ function App() {
           >
             航班住宿
           </button>
+          <button
+            className={`nav-button ${viewMode === 'checklist' ? 'active' : ''}`}
+            onClick={() => setViewMode('checklist')}
+          >
+            行前備忘錄
+          </button>
         </nav>
       </header>
 
@@ -51,6 +58,12 @@ function App() {
       {viewMode === 'info' && (
         <main className="app-main">
           <TripInfo />
+        </main>
+      )}
+
+      {viewMode === 'checklist' && (
+        <main className="app-main">
+          <Checklist />
         </main>
       )}
 
