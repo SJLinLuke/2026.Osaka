@@ -8,7 +8,7 @@
   text-align: center;
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 2px solid #beb5ad;
 }
 
 .schedule-title {
@@ -29,12 +29,12 @@
 
 .schedule-accommodation {
   display: inline-flex;
-  align-items: center;
+  align-items: lastbaseline;
   gap: 0.5rem;
-  background: #f8f8f8;
+  background: #f5f2f0;
   padding: 0.5rem 1.25rem;
   border-radius: 20px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #beb5ad;
 }
 
 .accommodation-label {
@@ -42,12 +42,15 @@
   color: #666;
   font-weight: 400;
   letter-spacing: 0.03em;
+  line-height: 1.5;
 }
 
 .accommodation-name {
   font-size: 0.75rem;
   color: #3a3a3a;
   font-weight: 400;
+  line-height: 1.5;
+  padding-top: 10px;
 }
 
 .activities-list {
@@ -68,8 +71,8 @@
   left: 42px;
   top: 50px;
   bottom: -24px;
-  width: 1px;
-  background: linear-gradient(to bottom, #d0d0d0 0%, transparent 100%);
+  width: 2px;
+  background: linear-gradient(to bottom, #beb5ad 0%, transparent 100%);
 }
 
 .activity-item:last-child::before {
@@ -83,11 +86,11 @@
 .time-badge {
   min-width: 70px;
   padding: 0.5rem 1rem;
-  background: white;
-  color: #5a5a5a;
-  border: 1px solid #c0c0c0;
+  background: #f5f2f0;
+  color: #6b6157;
+  border: 1px solid #beb5ad;
   border-radius: 10px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.875rem;
   text-align: center;
   letter-spacing: 0.03em;
@@ -103,7 +106,7 @@
 }
 
 .activity-content:hover {
-  border-color: #5a5a5a;
+  border-color: #beb5ad;
   transform: translateY(-2px);
 }
 
@@ -127,21 +130,21 @@
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  color: #888;
+  color: #6b6157;
   font-size: 0.8rem;
   margin-bottom: 0.75rem;
   padding: 0.65rem;
-  background: #f8f8f8;
+  background: #f5f2f0;
   border-radius: 8px;
   line-height: 1.6;
-  border-left: 2px solid #b0b0b0;
+  border-left: 3px solid #beb5ad;
   font-weight: 300;
 }
 
 .location-icon {
   flex-shrink: 0;
   margin-top: 2px;
-  color: #888;
+  color: #beb5ad;
 }
 
 .activity-notes {
@@ -174,7 +177,7 @@
   gap: 0.5rem;
   margin-top: 0.75rem;
   padding: 0.5rem 1rem;
-  background: #3a3a3a;
+  background: #beb5ad;
   color: white;
   text-decoration: none;
   font-size: 0.75rem;
@@ -185,7 +188,7 @@
 }
 
 .map-link:hover {
-  background: #5a5a5a;
+  background: #a89e94;
   transform: translateY(-1px);
 }
 

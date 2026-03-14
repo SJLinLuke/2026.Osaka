@@ -14,7 +14,7 @@
   color: #3a3a3a;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 2px solid #beb5ad;
   letter-spacing: 0.05em;
 }
 
@@ -32,14 +32,14 @@
 }
 
 .flight-card:hover {
-  border-color: #5a5a5a;
+  border-color: #beb5ad;
   transform: translateY(-2px);
 }
 
 .flight-direction {
   display: inline-block;
   padding: 0.5rem 1.25rem;
-  background: #3a3a3a;
+  background: #beb5ad;
   color: white;
   border-radius: 16px;
   font-weight: 400;
@@ -84,12 +84,12 @@
 .flight-route {
   margin-top: 1rem;
   padding: 1rem;
-  background: #f8f8f8;
+  background: #f5f2f0;
   border-radius: 12px;
   text-align: center;
   font-weight: 300;
-  color: #3a3a3a;
-  border: 1px solid #e0e0e0;
+  color: #6b6157;
+  border: 1px solid #beb5ad;
   letter-spacing: 0.02em;
   line-height: 1.6;
   font-size: 0.875rem;
@@ -110,7 +110,7 @@
 }
 
 .accommodation-card:hover {
-  border-color: #5a5a5a;
+  border-color: #beb5ad;
   transform: translateY(-2px);
 }
 
@@ -131,15 +131,15 @@
 }
 
 .nights-badge {
-  background: #f8f8f8;
-  color: #5a5a5a;
-  border: 1px solid #d0d0d0;
+  background: #f5f2f0;
+  color: #6b6157;
+  border: 1px solid #beb5ad;
 }
 
 .location-badge {
-  background: #f8f8f8;
-  color: #5a5a5a;
-  border: 1px solid #d0d0d0;
+  background: #f5f2f0;
+  color: #6b6157;
+  border: 1px solid #beb5ad;
 }
 
 .accommodation-name {
@@ -152,14 +152,14 @@
 }
 
 .accommodation-cost {
-  color: #5a5a5a;
+  color: #6b6157;
   font-weight: 400;
   font-size: 1.125rem;
   letter-spacing: 0.02em;
 }
 
 .cost-summary {
-  background: #3a3a3a;
+  background: #beb5ad;
   border-radius: 12px;
   padding: 2rem;
   color: white;

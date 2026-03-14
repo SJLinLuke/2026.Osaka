@@ -34,13 +34,13 @@
 }
 
 .date-item:hover {
-  border-color: #1a1a1a;
+  border-color: #beb5ad;
   transform: translateY(-2px);
 }
 
 .date-item.active {
-  background: #1a1a1a;
-  border-color: #1a1a1a;
+  background: #beb5ad;
+  border-color: #beb5ad;
   color: white;
 }
 
