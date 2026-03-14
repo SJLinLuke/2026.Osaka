@@ -136,11 +136,11 @@ body {
   }
 
   .app-title {
-    font-size: 1.65rem;
+    font-size: 1.8rem;
   }
 
   .app-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
@@ -149,8 +149,8 @@ body {
   }
 
   .nav-button {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 1.6rem;
+    font-size: 1rem;
   }
 
   .app-main {
@@ -174,16 +174,16 @@ body {
   }
 
   .app-title {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
 
   .app-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .nav-button {
-    padding: 0.65rem 1.25rem;
-    font-size: 0.85rem;
+    padding: 0.7rem 1.3rem;
+    font-size: 0.95rem;
   }
 
   .app-footer {

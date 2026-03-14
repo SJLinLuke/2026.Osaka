@@ -282,42 +282,42 @@
   }
 
   .checklist-title {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
 
   .checklist-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .checklist-stats {
-    padding: 0.5rem 1.15rem;
+    padding: 0.55rem 1.2rem;
   }
 
   .stat-item {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   .checklist-input-section {
-    gap: 0.65rem;
+    gap: 0.7rem;
   }
 
   .checklist-input {
-    padding: 0.75rem 1.15rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
   }
 
   .add-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
   }
 
   .checklist-item {
-    padding: 0.95rem 1.15rem;
-    gap: 0.9rem;
+    padding: 1rem 1.2rem;
+    gap: 0.95rem;
   }
 
   .item-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -332,11 +332,11 @@
   }
 
   .checklist-title {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
 
   .checklist-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .checklist-stats {
@@ -345,7 +345,7 @@
   }
 
   .stat-item {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .checklist-input-section {
@@ -362,7 +362,7 @@
   }
 
   .item-text {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .delete-button {

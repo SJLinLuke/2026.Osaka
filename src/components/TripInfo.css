@@ -224,7 +224,7 @@
   }
 
   .section-title {
-    font-size: 1.65rem;
+    font-size: 1.75rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.85rem;
   }
@@ -247,7 +247,7 @@
 
   .flight-direction {
     padding: 0.6rem 1.35rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 1.25rem;
   }
 
@@ -256,17 +256,17 @@
   }
 
   .flight-row .label {
-    font-size: 0.95rem;
+    font-size: 1rem;
     min-width: 85px;
   }
 
   .flight-row .value {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .flight-route {
     padding: 1.15rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .accommodation-card {
@@ -281,15 +281,15 @@
   .nights-badge,
   .location-badge {
     padding: 0.5rem 0.95rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .accommodation-name {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .accommodation-cost {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
   }
 
   .cost-summary {
@@ -301,12 +301,12 @@
   }
 
   .summary-row {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .total-cost,
   .cost-per-person {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -321,7 +321,7 @@
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1.25rem;
   }
 
@@ -342,7 +342,7 @@
 
   .flight-direction {
     padding: 0.55rem 1.2rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 1rem;
   }
 
@@ -354,18 +354,18 @@
   }
 
   .flight-row .label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     min-width: auto;
   }
 
   .flight-row .value {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     text-align: left;
   }
 
   .flight-route {
     padding: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .accommodation-card {
@@ -379,15 +379,15 @@
   .nights-badge,
   .location-badge {
     padding: 0.4rem 0.8rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .accommodation-name {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
 
   .accommodation-cost {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 
   .cost-summary {
@@ -401,7 +401,7 @@
   }
 
   .summary-row {
-    font-size: 0.95rem;
+    font-size: 1rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
@@ -414,6 +414,6 @@
 
   .total-cost,
   .cost-per-person {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 }

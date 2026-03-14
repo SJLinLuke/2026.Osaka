@@ -122,22 +122,22 @@
   }
 
   .date-day {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     margin-bottom: 0.4rem;
   }
 
   .date-number {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0.2rem;
   }
 
   .date-weekday {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     margin-bottom: 0.6rem;
   }
 
   .date-location {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     padding: 0.4rem 0.7rem;
   }
 }
@@ -159,19 +159,19 @@
   }
 
   .date-day {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 
   .date-number {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .date-weekday {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 
   .date-location {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 0.35rem 0.65rem;
   }
 }
