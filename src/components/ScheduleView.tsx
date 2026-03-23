@@ -56,11 +56,16 @@ export default function ScheduleView({ schedule }: ScheduleViewProps) {
                   ))}
                 </ul>
               )}
-         {(activity.mapUrl || activity.address) && (
+              {(activity.coordinates || activity.mapUrl || activity.address) && (
                 <a
- href={activity.mapUrl || `https://maps.apple.com/?q=${encodeURIComponent(activity.address || activity.title)}`}                  className="map-link"
+                  href={
+                    activity.coordinates
+                      ? `maps://?saddr=current+location&daddr=${activity.coordinates.latitude},${activity.coordinates.longitude}`
+                      : activity.mapUrl || `https://maps.apple.com/?q=${encodeURIComponent(activity.address || activity.title)}`
+                  }
+                  className="map-link"
                 >
-                  查看地圖 →
+                  開始導航 →
                 </a>
               )}
             </div>

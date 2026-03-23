@@ -5,6 +5,10 @@ export interface Activity {
   address?: string;
   notes?: string[];
   mapUrl?: string;
+  coordinates?: {
+    latitude: number;
+    longitude: number;
+  };
 }
 
 export interface DaySchedule {
