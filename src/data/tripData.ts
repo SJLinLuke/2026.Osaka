@@ -102,8 +102,14 @@ export const schedules: DaySchedule[] = [
         title: "難波南海通 / 千日前通",
         description: "吃午餐",
         address: "11-21, Nambasennichimae",
-        notes: ["月化粧（現烤小饅頭，千日前尾巴）", "青木松風庵 月化粧なんば店"],
-        coordinates: { latitude: 34.665219, longitude: 135.501907 },
+        notes: [
+          {
+            text: "月化粧（現烤小饅頭，千日前尾巴）",
+            coordinates: { latitude: 34.665219, longitude: 135.501907 }
+          },
+          "青木松風庵 月化粧なんば店"
+        ],
+        coordinates: { latitude: 34.665395, longitude: 135.503334 },
       },
       {
         time: "12:30",
@@ -129,7 +135,13 @@ export const schedules: DaySchedule[] = [
         time: "16:30",
         title: "千日前商店街",
         address: "千日前商店街 542-0076 大阪府 大阪市 難波1-3-4 日本",
-        notes: ["無限拉麵 千日前店", "結束看要不要回去放東西"],
+        notes: [
+          {
+            text: "無限拉麵 千日前店",
+            coordinates: { latitude: 34.667790, longitude: 135.503081 }
+          },
+          "結束看要不要回去放東西"
+        ],
         coordinates: { latitude: 34.667453, longitude: 135.503143 },
       },
       {
@@ -202,7 +214,16 @@ export const schedules: DaySchedule[] = [
         time: "16:00",
         title: "心齋橋筋",
         address: "心齋橋 大阪府 中央区, 大阪市",
-        notes: ["LE Croissant 可頌", "Tako Hachi 章魚燒 道頓堀総本店"],
+        notes: [
+          {
+            text: "LE Croissant 可頌",
+            coordinates: { latitude: 34.671022, longitude: 135.500952 }
+          },
+          {
+            text: "Tako Hachi 章魚燒 道頓堀総本店",
+            coordinates: { latitude: 34.668779, longitude: 135.503325 }
+          }
+        ],
         coordinates: { latitude: 34.674705, longitude: 135.501383 },
       },
       {
@@ -374,7 +395,20 @@ export const schedules: DaySchedule[] = [
         time: "14:00",
         title: "祇園",
         description: "京都車站 D2 206號巴士",
-        notes: ["彌生小路 605-0074 京都府 京都市 祇園町南側560", "花見小路通", "四条通 576, Giommachiminamigawa"],
+        notes: [
+          {
+            text: "彌生小路",
+            coordinates: { latitude: 35.003360, longitude: 135.775462 }
+          },
+          {
+            text: "花見小路通",
+            coordinates: { latitude: 35.003671, longitude: 135.775022 }
+          },
+          {
+            text: "四条通",
+            coordinates: { latitude: 35.003631, longitude: 135.774130 }
+          }
+        ],
         coordinates: { latitude: 35.003360, longitude: 135.775462 },
         story: "祇園的歷史可追溯至平安時代，最初是八坂神社的門前町。江戶時代發展為著名花街，成為藝妓文化的中心。花見小路在明治時期前屬於建仁寺領地，後來才開發成現今樣貌，是電影《藝妓回憶錄》的拍攝地。祇園甲部、祇園東、上七軒、先斗町、宮川町是京都現存的五處花街，祇園甲部最為知名。這裡的藝妓經過多年嚴格訓練，精通舞蹈、音樂和接待藝術，是京都傳統文化的重要傳承者。",
       },
@@ -392,7 +426,16 @@ export const schedules: DaySchedule[] = [
       {
         time: "20:00",
         title: "逛街",
-        notes: ["三條通 41-2, Koromonotanacho", "六角通 127-4, Tamakuracho"],
+        notes: [
+          {
+            text: "三條通",
+            coordinates: { latitude: 35.008694, longitude: 135.756891 }
+          },
+          {
+            text: "六角通",
+            coordinates: { latitude: 35.007435, longitude: 135.757484 }
+          }
+        ],
         coordinates: { latitude: 35.008694, longitude: 135.756891 },
       },
       {
@@ -415,7 +458,13 @@ export const schedules: DaySchedule[] = [
       {
         time: "10:00",
         title: "奈良",
-        notes: ["春日大社(若草山)", "奈良公園"],
+        notes: [
+          "春日大社(若草山)",
+          {
+            text: "奈良公園",
+            coordinates: { latitude: 34.684058, longitude: 135.841205 }
+          }
+        ],
         address: "春日大社 奈良県 奈良市",
         coordinates: { latitude: 34.681244, longitude: 135.848262 },
         story: "春日大社建於768年，由權傾一時的藤原氏所創建，已有1250多年歷史，是全國約3000座春日神社的總本社。傳說主祭神武甕槌命乘白鹿從鹿島神宮來到奈良，因此鹿被視為神的使者。藤原氏將春日大社視為氏神，通過將女兒嫁給天皇成為外戚，獨占攝政和關白職位，在貴族社會擁有巨大影響力。神社作為「古都奈良的文化財」被列為世界遺產，境內和奈良公園的鹿至今仍受到神聖的對待。",
@@ -424,7 +473,15 @@ export const schedules: DaySchedule[] = [
         time: "14:00",
         title: "宇治",
         address: "平等院 京都府 宇治市",
-        notes: ["平等院表參道", "抹茶", "宇治川", "通圓茶屋 蕎麥麵 (通圓 宇治本店)"],
+        notes: [
+          "平等院表參道",
+          "抹茶",
+          {
+            text: "宇治川",
+            coordinates: { latitude: 34.893233, longitude: 135.807214 }
+          },
+          "通圓茶屋 蕎麥麵 (通圓 宇治本店)"
+        ],
         coordinates: { latitude: 34.889273, longitude: 135.807680 },
         story: "平等院由藤原賴通於1052年創建，將父親藤原道長的別墅改建為寺院。鳳凰堂於1053年落成，是平安時代貴族追求的「淨土」建築代表，象徵阿彌陀如來的西方極樂淨土。1951年，鳳凰堂因其獨特建築特色和文化價值被選為10圓硬幣圖案，成為日本最知名的文化符號之一。屋頂上裝飾的鳳凰展翅欲飛，整座建築倒映在池水中，美不勝收。1994年被列為世界文化遺產。",
       },

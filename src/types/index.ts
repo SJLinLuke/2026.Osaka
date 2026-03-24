@@ -1,14 +1,21 @@
+export interface Coordinates {
+  latitude: number;
+  longitude: number;
+}
+
+export interface Note {
+  text: string;
+  coordinates?: Coordinates;
+}
+
 export interface Activity {
   time: string;
   title: string;
   description?: string;
   address?: string;
-  notes?: string[];
+  notes?: (string | Note)[];
   mapUrl?: string;
-  coordinates?: {
-    latitude: number;
-    longitude: number;
-  };
+  coordinates?: Coordinates;
   story?: string;
 }
 

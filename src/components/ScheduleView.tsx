@@ -64,9 +64,30 @@ export default function ScheduleView({ schedule }: ScheduleViewProps) {
               )}
               {activity.notes && activity.notes.length > 0 && (
                 <ul className="activity-notes">
-                  {activity.notes.map((note, noteIndex) => (
-                    <li key={noteIndex}>{note}</li>
-                  ))}
+                  {activity.notes.map((note, noteIndex) => {
+                    const isNoteObject = typeof note === 'object' && 'text' in note;
+                    const noteText = isNoteObject ? note.text : note;
+                    const noteCoordinates = isNoteObject ? note.coordinates : undefined;
+
+                    return (
+                      <li key={noteIndex}>
+                        {noteCoordinates ? (
+                          <a
+                            href={`maps://?saddr=current+location&daddr=${noteCoordinates.latitude},${noteCoordinates.longitude}`}
+                            className="note-link"
+                          >
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                              <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            {noteText}
+                          </a>
+                        ) : (
+                          noteText
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
               {activity.story && (
