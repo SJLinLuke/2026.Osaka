@@ -9,6 +9,7 @@ export interface Activity {
     latitude: number;
     longitude: number;
   };
+  story?: string;
 }
 
 export interface DaySchedule {

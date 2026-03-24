@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { DaySchedule } from '../types';
 import './ScheduleView.css';
 
@@ -6,6 +7,8 @@ interface ScheduleViewProps {
 }
 
 export default function ScheduleView({ schedule }: ScheduleViewProps) {
+  const [expandedStories, setExpandedStories] = useState<Set<number>>(new Set());
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     const year = date.getFullYear();
@@ -14,6 +17,16 @@ export default function ScheduleView({ schedule }: ScheduleViewProps) {
     const days = ['日', '一', '二', '三', '四', '五', '六'];
     const weekday = days[date.getDay()];
     return `${year}.${month}.${day} (${weekday})`;
+  };
+
+  const toggleStory = (index: number) => {
+    const newExpanded = new Set(expandedStories);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedStories(newExpanded);
   };
 
   return (
@@ -55,6 +68,36 @@ export default function ScheduleView({ schedule }: ScheduleViewProps) {
                     <li key={noteIndex}>{note}</li>
                   ))}
                 </ul>
+              )}
+              {activity.story && (
+                <div className="activity-story">
+                  <button
+                    className="story-toggle"
+                    onClick={() => toggleStory(index)}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    {expandedStories.has(index) ? '收起故事' : '歷史故事'}
+                    <svg
+                      className={`chevron ${expandedStories.has(index) ? 'expanded' : ''}`}
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  {expandedStories.has(index) && (
+                    <div className="story-content">
+                      {activity.story}
+                    </div>
+                  )}
+                </div>
               )}
               {(activity.coordinates || activity.mapUrl || activity.address) && (
                 <a

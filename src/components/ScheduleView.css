@@ -174,6 +174,72 @@
   font-size: 1.2rem;
 }
 
+.activity-story {
+  margin-top: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 0.75rem;
+}
+
+.story-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: #f8f6f4;
+  border: 1px solid #e0d9d3;
+  border-radius: 8px;
+  color: #6b6157;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+}
+
+.story-toggle:hover {
+  background: #f0ebe6;
+  border-color: #beb5ad;
+  color: #3a3a3a;
+}
+
+.story-toggle svg:first-child {
+  color: #a89e94;
+}
+
+.story-toggle .chevron {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.story-toggle .chevron.expanded {
+  transform: rotate(180deg);
+}
+
+.story-content {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background: #fdfcfb;
+  border-left: 3px solid #d4cbc3;
+  border-radius: 8px;
+  color: #4a4a4a;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  font-weight: 300;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .map-link {
   display: inline-flex;
   align-items: center;
@@ -293,6 +359,16 @@
     font-size: 0.95rem;
   }
 
+  .story-toggle {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.05rem;
+  }
+
+  .story-content {
+    font-size: 1rem;
+    padding: 1.05rem;
+  }
+
   .map-link {
     font-size: 0.9rem;
     padding: 0.55rem 1.1rem;
@@ -363,6 +439,16 @@
 
   .activity-notes li {
     font-size: 0.9rem;
+  }
+
+  .story-toggle {
+    font-size: 0.9rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .story-content {
+    font-size: 0.95rem;
+    padding: 1rem;
   }
 
   .map-link {
