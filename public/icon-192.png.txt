@@ -1,0 +1,5 @@
+這是一個 placeholder 文件。
+實際部署時，請替換為 192x192 的 PNG 圖示。
+可以使用以下工具產生：
+- https://favicon.io/
+- https://realfavicongenerator.net/

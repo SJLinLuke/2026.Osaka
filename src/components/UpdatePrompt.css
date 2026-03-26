@@ -1,0 +1,158 @@
+.update-prompt-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.update-prompt {
+  pointer-events: auto;
+  max-width: 500px;
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(190, 181, 173, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.update-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #beb5ad 0%, #a89e94 100%);
+  border-radius: 12px;
+  color: white;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.update-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.update-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: 0.02em;
+}
+
+.update-message {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.update-actions {
+  flex-shrink: 0;
+}
+
+.update-button {
+  padding: 0.75rem 1.5rem;
+  background: #beb5ad;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(190, 181, 173, 0.3);
+}
+
+.update-button:hover {
+  background: #a89e94;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(190, 181, 173, 0.4);
+}
+
+.update-button:active {
+  transform: translateY(0);
+}
+
+/* 手機尺寸 */
+@media (max-width: 768px) {
+  .update-prompt-overlay {
+    padding: 1rem;
+  }
+
+  .update-prompt {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .update-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .update-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .update-title {
+    font-size: 0.95rem;
+  }
+
+  .update-message {
+    font-size: 0.8rem;
+  }
+
+  .update-button {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* 小手機尺寸 */
+@media (max-width: 480px) {
+  .update-prompt {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .update-actions {
+    width: 100%;
+  }
+
+  .update-button {
+    width: 100%;
+  }
+}

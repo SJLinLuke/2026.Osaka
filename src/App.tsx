@@ -5,6 +5,7 @@ import ScheduleView from './components/ScheduleView'
 import TripInfo from './components/TripInfo'
 import Checklist from './components/Checklist'
 import ShoppingList from './components/ShoppingList'
+import UpdatePrompt from './components/UpdatePrompt'
 import { schedules } from './data/tripData'
 
 type ViewMode = 'schedule' | 'info' | 'checklist' | 'shopping'
@@ -87,6 +88,9 @@ function App() {
           <span className="build-item">{import.meta.env.VITE_COMMIT_HASH || 'local'}</span>
         </div>
       </footer>
+
+      {/* 更新提示 */}
+      <UpdatePrompt />
     </div>
   )
 }
