@@ -61,7 +61,7 @@ export const schedules: DaySchedule[] = [
           "國際線北邊出口直走",
           "電扶梯往二樓",
           "右轉過空橋",
-          "搭地鐵",
+          "搭車順序：南海電鐵 → 天下茶屋（轉堺筋線） → 日本橋",
         ],
       },
       {
@@ -93,7 +93,16 @@ export const schedules: DaySchedule[] = [
         time: "09:00",
         title: "黑門市場",
         address: "黑門市場 大阪 大阪市中央區",
-        notes: ["走路就可以到"],
+        notes: [
+          {
+            text: "三都屋 蕨餅",
+            coordinates: { latitude: 34.665741, longitude: 135.507072 }
+          },
+          {
+            text: "石橋食品 關東煮",
+            coordinates: { latitude: 34.665137, longitude: 135.507073 }
+          }
+        ],
         coordinates: { latitude: 34.665339, longitude: 135.507051 },
         story: "黑門市場的歷史可追溯至江戶時代後期，距今已有180多年歷史。原名「圓明寺市場」，因附近的圓明寺山門被塗成黑色而得名「黑門市場」。自1822年左右，商人就在此販賣從堺和紀州運來的魚類。如今這條長約580公尺的商店街被譽為「大阪的廚房」，聚集了100多間店鋪，以夏天的海鰻和冬天的河豚最為著名。",
       },
@@ -160,10 +169,10 @@ export const schedules: DaySchedule[] = [
         story: "固力果跑跑人霓虹招牌自1935年設立，至今已是第六代，是世界最著名的戶外廣告之一。跑者的原型來自1924年巴黎奧運日本選手，招牌上的「一粒300公尺」意指吃一粒固力果焦糖糖果就能獲得跑300公尺的能量。這個招牌見證了大阪近百年的繁榮發展，是大阪人心中不可替代的地標。",
       },
       {
-        time: "21:00",
-        title: "3Coin",
-        address: "3COINS難波Walk店 大阪府 大阪市",
-        coordinates: { latitude: 34.667104, longitude: 135.502069 },
+        time: "20:00",
+        title: "Big Camera 難波店",
+        address: "Bic Camera難波店 大阪府 大阪市",
+        coordinates: { latitude: 34.666631, longitude: 135.502130 },
       },
       {
         time: "22:00",
@@ -236,10 +245,25 @@ export const schedules: DaySchedule[] = [
       {
         time: "19:00",
         title: "晚餐",
-        description: "固力果下拉麵",
+        description: "晚餐選項",
+        notes: [
+          {
+            text: "拉麵 Hayashida（固力果下）",
+            coordinates: { latitude: 34.668888, longitude: 135.501146 }
+          },
+          {
+            text: "Yakinikuen忍鬨",
+            coordinates: { latitude: 34.672702, longitude: 135.505199 }
+          }
+        ],
         address: "らぁ麺はやし田 道頓堀店 大阪府 大阪市",
-        notes: ["拉麵 Hayashida"],
         coordinates: { latitude: 34.668888, longitude: 135.501146 },
+      },
+      {
+        time: "20:00",
+        title: "3Coin",
+        address: "3COINS難波Walk店 大阪府 大阪市",
+        coordinates: { latitude: 34.667104, longitude: 135.502069 },
       },
       {
         time: "21:00",
@@ -273,7 +297,7 @@ export const schedules: DaySchedule[] = [
         coordinates: { latitude: 34.865856, longitude: 135.491070 },
       },
       {
-        time: "14:30",
+        time: "16:30",
         title: "通天閣",
         address: "通天閣 大阪府 浪速区, 大阪市",
         notes: [
@@ -285,14 +309,14 @@ export const schedules: DaySchedule[] = [
         story: "通天閣的名字由明治時期儒學者藤澤南嶽命名，意為「直通天空的高建築物」。第一代通天閣建於1912年，仿照巴黎艾菲爾鐵塔，高75公尺。1943年毀於火災後，直到1956年才重建第二代通天閣，由東京鐵塔的設計師內藤多仲設計，高103公尺。通天閣見證了大阪庶民文化的發展，周邊的新世界地區至今仍保有昭和時代的懷舊氛圍。",
       },
       {
-        time: "17:00",
+        time: "18:00",
         title: "阿倍野展望台",
         description: "天王寺站，看夜景",
         address: "ハルカス300 (展望台) 大阪府 阿倍野区, 大阪市",
         coordinates: { latitude: 34.645756, longitude: 135.513466 },
       },
       {
-        time: "19:00",
+        time: "20:00",
         title: "法善寺門町",
         description: "夫婦善哉 紅豆湯",
         address: "法善寺 夫婦善哉 大阪府 中央区, 大阪市",
@@ -319,7 +343,11 @@ export const schedules: DaySchedule[] = [
       {
         time: "10:30",
         title: "往京都並寄行李",
-        notes: ["大阪到京都 13mins"],
+        notes: [
+          "大阪到京都 13mins",
+          "京都車站寄放行李：京都塔1樓CROSTA 地下街",
+          "搭京都地鐵烏丸線（北上）四站至今出川站，再步行15分鐘至下鴨神社",
+        ],
       },
       {
         time: "11:30",
@@ -332,7 +360,14 @@ export const schedules: DaySchedule[] = [
       {
         time: "12:30",
         title: "午餐",
-        description: "待定",
+        description: "出町ろろろ（出町柳站附近）",
+        notes: [
+          "出町ろろろ：營業時間 11:30-15:00, 17:00-20:00",
+          {
+            text: "備案：天下一品 京都本店（拉麵）",
+            coordinates: { latitude: 35.033218, longitude: 135.769234 }
+          }
+        ],
       },
       {
         time: "14:30",
@@ -387,7 +422,17 @@ export const schedules: DaySchedule[] = [
         time: "09:00",
         title: "清水寺",
         address: "清水寺 京都府 東山区, 京都市",
-        notes: ["穿和服", "京阿彌 爆漿抹茶泡芙"],
+        notes: [
+          "穿和服",
+          {
+            text: "京阿彌 爆漿抹茶泡芙",
+            coordinates: { latitude: 34.996383, longitude: 135.780833 }
+          },
+          {
+            text: "京都 Onimaru 飯糰",
+            coordinates: { latitude: 34.996692, longitude: 135.779753 }
+          }
+        ],
         coordinates: { latitude: 34.994793, longitude: 135.785002 },
         story: "清水寺建於778年，擁有超過1200年歷史，是京都最古老的寺院之一。寺名來自音羽瀑布的清澈泉水，這座泉水被列為日本十大名水之首，分為三道水流，分別代表長壽、健康和智慧。最著名的是懸空的「清水舞台」，由139根高達十數公尺的巨木支撐，完全沒有使用一根釘子，充分展現了日本古代建築工藝。1994年被列為世界文化遺產。",
       },
@@ -459,10 +504,15 @@ export const schedules: DaySchedule[] = [
         time: "10:00",
         title: "奈良",
         notes: [
+          "京都車站搭JR奈良線到奈良站約45分鐘",
           "春日大社(若草山)",
           {
             text: "奈良公園",
             coordinates: { latitude: 34.684058, longitude: 135.841205 }
+          },
+          {
+            text: "東大寺大佛殿",
+            coordinates: { latitude: 34.688968, longitude: 135.839801 }
           }
         ],
         address: "春日大社 奈良県 奈良市",
@@ -489,7 +539,14 @@ export const schedules: DaySchedule[] = [
         time: "17:00",
         title: "八阪神社",
         address: "八坂神社 京都府 東山区, 京都市",
-        notes: ["晚上去", "錦拉麵（抹茶柚子拉麵）", "麵屋優光（拉麵）"],
+        notes: [
+          "晚上去",
+          {
+            text: "錦拉麵（抹茶柚子拉麵）",
+            coordinates: { latitude: 35.004859, longitude: 135.767673 }
+          },
+          "麵屋優光（拉麵）"
+        ],
         coordinates: { latitude: 35.003651, longitude: 135.778554 },
         story: "八坂神社是全國約2300座八坂神社和祭祀素戔嗚尊神社的總本社，通稱「祇園さん」。主祭神素戔嗚尊自古被視為消除疫病之神。869年京都爆發疫病時，人們向八坂神社祈禱，這就是祇園祭的起源。祇園祭從每年7月1日持續到31日，長達一個月，是日本三大祭之一，以華麗的山鉾巡行聞名於世，展現了京都千年的祭典文化傳統。",
       },
@@ -515,7 +572,15 @@ export const schedules: DaySchedule[] = [
     accommodation: "旅館 竹水 なんば駅まで10分",
     activities: [
       { time: "08:00", title: "起床" },
-      { time: "08:30", title: "出門" },
+      {
+        time: "08:30",
+        title: "出門並寄行李至旅館竹水",
+        notes: [
+          "從京都搭JR回大阪約30分鐘",
+          "先到旅館竹水寄放行李",
+          "旅館位於難波站步行10分鐘處",
+        ],
+      },
       {
         time: "09:00",
         title: "美國村 橘子街",
