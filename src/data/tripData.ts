@@ -613,12 +613,6 @@ export const schedules: DaySchedule[] = [
         description: "待定",
       },
       {
-        time: "13:00",
-        title: "Big Camera 難波店",
-        address: "Bic Camera難波店 大阪府 大阪市",
-        coordinates: { latitude: 34.666631, longitude: 135.50213 },
-      },
-      {
         time: "14:30",
         title: "日本橋電器街",
         address: "5-7, Nippombashi 2-Chōme",
