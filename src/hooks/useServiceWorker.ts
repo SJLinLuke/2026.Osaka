@@ -73,17 +73,33 @@ export function useServiceWorker() {
   // 更新應用程式
   const updateApp = () => {
     if (!registration || !registration.waiting) {
+      // 如果沒有等待中的 worker，直接重新載入
+      console.log('[Update] No waiting worker, reloading...');
+      window.location.reload();
       return;
     }
 
-    // 告訴等待中的 Service Worker 接管
-    registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+    // 先隱藏更新提示
+    setUpdateAvailable(false);
 
-    // 監聽 controlling 事件
-    navigator.serviceWorker.addEventListener('controllerchange', () => {
+    // 設置 controllerchange 監聽器（在發送訊息之前）
+    const onControllerChange = () => {
+      console.log('[Update] Controller changed, reloading...');
       // 重新載入頁面以使用新版本
       window.location.reload();
-    });
+    };
+
+    navigator.serviceWorker.addEventListener('controllerchange', onControllerChange, { once: true });
+
+    // 告訴等待中的 Service Worker 接管
+    console.log('[Update] Sending SKIP_WAITING message...');
+    registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+
+    // 如果 2 秒內沒有觸發 controllerchange，強制重新載入
+    setTimeout(() => {
+      console.log('[Update] Timeout, force reloading...');
+      window.location.reload();
+    }, 2000);
   };
 
   return {

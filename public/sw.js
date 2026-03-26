@@ -1,5 +1,5 @@
 // Service Worker for 2026 Osaka Trip
-const CACHE_VERSION = 'v1.0.8'; // 更新這個版本號會觸發更新
+const CACHE_VERSION = 'v1.0.9'; // 更新這個版本號會觸發更新
 const CACHE_NAME = `osaka-trip-${CACHE_VERSION}`;
 
 // 需要快取的資源

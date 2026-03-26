@@ -48,12 +48,25 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
+.update-icon.updating {
+  animation: spin 1s linear infinite, pulse 2s ease-in-out infinite;
+}
+
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -104,6 +117,18 @@
 
 .update-button:active {
   transform: translateY(0);
+}
+
+.update-button:disabled {
+  background: #d0d0d0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.update-button:disabled:hover {
+  background: #d0d0d0;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(190, 181, 173, 0.3);
 }
 
 /* 手機尺寸 */
