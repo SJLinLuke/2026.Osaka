@@ -22,9 +22,156 @@
 .checklist-subtitle {
   font-size: 0.875rem;
   color: #888;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-weight: 300;
   letter-spacing: 0.03em;
+}
+
+/* 固定清單區塊 */
+.fixed-checklist-section {
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #f8f6f4 0%, #fdfcfb 100%);
+  border: 1px solid #e0d9d3;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px rgba(190, 181, 173, 0.12);
+}
+
+.fixed-checklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0d9d3;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #3a3a3a;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.section-title svg {
+  color: #beb5ad;
+  flex-shrink: 0;
+}
+
+.reset-button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #6b6157;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.reset-button:hover {
+  background: #beb5ad;
+  color: white;
+  border-color: #beb5ad;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(190, 181, 173, 0.25);
+}
+
+.reset-button svg {
+  flex-shrink: 0;
+}
+
+.fixed-stats {
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 8px;
+  background: #e0d9d3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #beb5ad 0%, #a89e94 100%);
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  color: #6b6157;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.fixed-checklist-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.75rem;
+}
+
+.fixed-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(190, 181, 173, 0.08);
+}
+
+.fixed-checklist-item:hover {
+  border-color: #beb5ad;
+  box-shadow: 0 2px 6px rgba(190, 181, 173, 0.12);
+  transform: translateY(-1px);
+}
+
+.fixed-checklist-item.checked {
+  background: #f5f2f0;
+  opacity: 0.75;
+}
+
+.fixed-checklist-item .item-text {
+  font-size: 0.8rem;
+}
+
+/* 自訂清單區塊 */
+.custom-checklist-section {
+  margin-top: 2rem;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.custom-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f5f2f0;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  border: 1px solid #beb5ad;
+  box-shadow: 0 2px 4px rgba(190, 181, 173, 0.1);
+  margin-top: 0.75rem;
 }
 
 .checklist-stats {
@@ -289,7 +436,37 @@
     font-size: 1rem;
   }
 
+  .fixed-checklist-section {
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.05rem;
+  }
+
+  .fixed-checklist-items {
+    grid-template-columns: 1fr;
+  }
+
+  .fixed-checklist-item .item-text {
+    font-size: 0.95rem;
+  }
+
+  .reset-button {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.95rem;
+  }
+
+  .progress-text {
+    font-size: 0.85rem;
+  }
+
   .checklist-stats {
+    padding: 0.55rem 1.2rem;
+  }
+
+  .custom-stats {
     padding: 0.55rem 1.2rem;
   }
 
@@ -339,7 +516,47 @@
     font-size: 0.95rem;
   }
 
+  .fixed-checklist-section {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .fixed-checklist-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .reset-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .fixed-stats {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .progress-text {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .fixed-checklist-item .item-text {
+    font-size: 0.9rem;
+  }
+
   .checklist-stats {
+    padding: 0.45rem 1.05rem;
+    gap: 0.65rem;
+  }
+
+  .custom-stats {
     padding: 0.45rem 1.05rem;
     gap: 0.65rem;
   }

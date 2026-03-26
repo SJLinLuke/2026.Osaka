@@ -49,9 +49,7 @@ export default function ShoppingList() {
 
   // 儲存到 localStorage
   useEffect(() => {
-    if (stores.length > 0) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(stores));
-    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(stores));
   }, [stores]);
 
   const addStore = () => {
